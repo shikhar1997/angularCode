@@ -1,0 +1,47 @@
+<div class="jumbotron jumbotron-fluid">
+	<div class="container">
+	  <h1 class="display-5">Welcome to Online Computer Hardware Retail Store. </h1>
+	  <p class="lead">
+		Please select the desired operation
+	  </p>
+	</div>
+  </div>
+
+<div class="container h-100"> 
+	<div class="row h-100 justify-content-center align-items-center">
+		<div>
+			<form style="border:1px solid burlywood ; height: 600px; width: 600px" class="px-4 py-3">
+
+				<div style="width:150px ;">
+
+					<div style="margin-top: 10px;">
+						<button type="submit" [routerLink]="['count-component']" class="btn btn-primary">Get Number of Components</button>
+					</div>
+
+					<div class="form-group" style="margin-top: 100px;"> 
+						<label for="name">Component Name</label> 
+						<input id="name" value="Atom Processor C3708" type="text" class="form-control" [routerLink] = "['search-by-name-component']" style="width:500px;" id="name" placeholder="Enter component name" >
+					</div>
+
+					<div class="dropdown" >
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Dropdown
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenu2" >
+						  <button class="dropdown-item" type="button"  id = "button1">Atom Processor C3708</button>
+						  <button class="dropdown-item" type="button"  id = "button2">Atom Processor C3750</button>
+						  <button class="dropdown-item" type="button"  id = "button3">Atom Processor C3758</button>
+						  <button class="dropdown-item" type="button"  id = "button4">Atom Processor C3850</button>
+						</div>
+					  </div>
+
+					<div style="margin-top: 100px;"> 
+						<button [routerLink] = "['available-components']" class="btn btn-primary">Get Available Components</button> 
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
