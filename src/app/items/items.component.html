@@ -18,12 +18,7 @@
 						<button type="submit" [routerLink]="['count-component']" class="btn btn-primary">Get Number of Components</button>
 					</div>
 
-					<div class="form-group" style="margin-top: 100px;"> 
-						<label for="name">Component Name</label> 
-						<input id="name" value="Atom Processor C3708" type="text" class="form-control" [routerLink] = "['search-by-name-component']" style="width:500px;" id="name" placeholder="Enter component name" >
-					</div>
-
-					<div class="dropdown" >
+					<!--<div class="dropdown" >
 						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						  Dropdown
 						</button>
@@ -33,7 +28,21 @@
 						  <button class="dropdown-item" type="button"  id = "button3">Atom Processor C3758</button>
 						  <button class="dropdown-item" type="button"  id = "button4">Atom Processor C3850</button>
 						</div>
-					  </div>
+					  </div> -->
+
+					<div class="form-group" style="margin-top: 100px;"> 
+						<label>Choose a name to search by: 
+							<input list="name" type="text" class="form-control" [routerLink] = "['search-by-name-component']" style="width:500px;" placeholder="Enter component name" (input)=setComponentName($event) >
+						</label>
+						
+						<datalist id="name">
+							<option value="Atom Processor C3708">
+							<option value="Atom Processor C3750">
+							<option value="Atom Processor C3758">
+							<option value="Atom Processor C3850">
+						</datalist>
+					</div>
+
 
 					<div style="margin-top: 100px;"> 
 						<button [routerLink] = "['available-components']" class="btn btn-primary">Get Available Components</button> 

@@ -7,7 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { AvailableComponentsComponent } from './available-components/available-components.component';
 import { SearchByNameComponentComponent } from './search-by-name-component/search-by-name-component.component';
 import { CountComponentComponent } from './count-component/count-component.component';
-import { ItemsComponent } from './items/items.component'
+import { ItemsComponent } from './items/items.component';
+import { BuildComponent } from './build/build.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ItemsComponent } from './items/items.component'
     AvailableComponentsComponent,
     SearchByNameComponentComponent,
     CountComponentComponent,
-    ItemsComponent
+    ItemsComponent,
+    BuildComponent
   ],
   imports: [
     BrowserModule,

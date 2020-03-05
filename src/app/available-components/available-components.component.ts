@@ -3,7 +3,6 @@ import { ComponentDataService } from '../service/data/component-data.service';
 import { Subscription } from 'rxjs';
 import { ComputerComponent } from '../classes/ComputerComponent'; 
 import { HttpResponseBase } from '@angular/common/http';
-import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-available-components',
@@ -29,7 +28,7 @@ export class AvailableComponentsComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.subscriptions.unsubscribe(); 
+    this.subscriptions.unsubscribe();  
   }
 
   handleSuccessfulResponseList(response) {

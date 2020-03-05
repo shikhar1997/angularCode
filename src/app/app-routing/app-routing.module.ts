@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AppComponent } from '../app.component';
 import { AvailableComponentsComponent } from '../available-components/available-components.component'; 
 import { CountComponentComponent } from '../count-component/count-component.component';
 import { SearchByNameComponentComponent } from '../search-by-name-component/search-by-name-component.component'; 
+import { ItemsComponent } from '../items/items.component';
 
 const routes: Routes  = [
+
   {
-    path: 'app',
-    component: AppComponent
-  }, 
-  
+    path: '',
+    component: ItemsComponent
+  },
+
   {
-    path: 'available-components',
+    path: 'available-components', 
     component: AvailableComponentsComponent
   },
 
@@ -23,8 +24,8 @@ const routes: Routes  = [
   },
 
   {
-    path: 'search-by-name-component',
-    component: SearchByNameComponentComponent
+    path: 'search-by-name-component', 
+    component: SearchByNameComponentComponent 
   }
 
 ] ;

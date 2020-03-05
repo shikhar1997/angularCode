@@ -1,5 +1,47 @@
-<p> Search by Name Results </p>
+<p>Search By Name Component Results are: </p>
 
-<div class= "container"> 
-    {{ responseString }}
-</div>
+<table class="table">
+    
+    <thead>        
+        <tr>
+            <th scope="col"> Category</th>
+            <th scope="col"> Name</th>
+            <th scope="col"> Brand</th>
+            <th scope="col"> ProductLine</th>
+            <th scope="col"> NumberOfCores</th>
+            <th scope="col"> ProcessorClockSpeed</th>
+            <th scope="col"> GraphicClockSpeed</th>
+            <th scope="col"> Dimension</th>
+            <th scope="col"> Resolution</th>
+            <th scope="col"> Color</th>
+            <th scope="col"> InterfaceName</th>
+            <th scope="col"> Size</th>
+            <th scope="col"> Price</th>
+            <th scope="col"> Quantity</th>
+        </tr>
+    </thead>
+
+<!--    Try to embed typescript in html --> 
+
+    <tbody>
+        <tr>
+            <td>{{this.searchResult[0].category}}</td>
+            <td>{{this.searchResult[0].name}} </td>
+            <td>{{this.searchResult[0].brand}}</td>
+            <td>{{this.searchResult[0].productLine}}</td>
+            <td>{{this.searchResult[0].numberOfCores}} </td>
+            <td>{{this.searchResult[0].processorClockSpeed}}</td>
+            <td>{{this.searchResult[0].graphicClockSpeed}}</td>
+            <td>{{this.searchResult[0].dimension}}</td>
+            <td>{{this.searchResult[0].resolution}} </td>
+            <td>{{this.searchResult[0].color}}</td>
+            <td>{{this.searchResult[0].interfaceName}}</td>
+            <td>{{this.searchResult[0].size}}</td>
+            <td>{{this.searchResult[0].price}} </td>
+            <td>{{this.searchResult[0].quantity}}</td>
+        </tr>
+
+
+    </tbody>
+
+</table>
