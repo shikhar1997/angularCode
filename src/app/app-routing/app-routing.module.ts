@@ -5,6 +5,7 @@ import { AvailableComponentsComponent } from '../available-components/available-
 import { CountComponentComponent } from '../count-component/count-component.component';
 import { SearchByNameComponentComponent } from '../search-by-name-component/search-by-name-component.component'; 
 import { ItemsComponent } from '../items/items.component';
+import { BuildComponent } from '../build/build.component'; 
 
 const routes: Routes  = [
 
@@ -26,6 +27,11 @@ const routes: Routes  = [
   {
     path: 'search-by-name-component', 
     component: SearchByNameComponentComponent 
+  },
+
+  {
+    path: 'build', 
+    component: BuildComponent 
   }
 
 ] ;
@@ -40,4 +46,6 @@ const routes: Routes  = [
     RouterModule
   ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  
+}

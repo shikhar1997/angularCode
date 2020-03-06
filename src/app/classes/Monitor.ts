@@ -1,4 +1,4 @@
-export class Mouse {
+export class Monitor {
     id: String;
     category: String;
     name: String;
@@ -6,5 +6,6 @@ export class Mouse {
     price: number; 
     quantity: String; 
     dimension: String; 
+    resolution: String; 
     color: String; 
 }

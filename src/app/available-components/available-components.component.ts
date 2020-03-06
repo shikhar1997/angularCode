@@ -14,8 +14,10 @@ export class AvailableComponentsComponent implements OnInit {
   private subscriptions = new Subscription(); 
   public message: String; 
   public components: ComputerComponent[];
+  public error: boolean; 
 
   constructor(private service:ComponentDataService) {  
+    this.error = false; 
     this.components = [];  // important line.
   }
 
@@ -23,12 +25,19 @@ export class AvailableComponentsComponent implements OnInit {
     this.service.getAvailableItemsService();
 
     this.subscriptions.add( this.service.getAvailableItemsService().subscribe(
-      response => this.handleSuccessfulResponseList(response) 
+      response => this.handleSuccessfulResponseList(response) ,
+      error => this.handleErrorResponse(error)
     ) ) ; 
   }
 
   ngOnDestroy() {
     this.subscriptions.unsubscribe();  
+  }
+
+  handleErrorResponse(error){
+    if(error){
+      this.error = true; 
+    }
   }
 
   handleSuccessfulResponseList(response) {
